@@ -1,0 +1,23 @@
+* C:\Users\You\Documents\Project-Tally\LineControlCircuit.asc
+XU1 N007 N004 N002 Vcc 0 LTC2054
+XU2 N003 N002 N006 Vcc 0 LTC2054
+R1 Vcc N003 20k
+R2 N003 0 10k
+V1 Vcc 0 3.3
+C1 N004 N002 1µ
+R3 N004 0 1k
+R4 N006 0 10k
+V2 N001 0 PULSE(0 3.3 10e-4 1e-9 1e-9 1e-4 20e-4 1)
+V3 -Vcc 0 -3.3
+R5 N007 N001 1k
+C2 N007 0 1µ
+M1 N004 N001 N002 N002 NMOS
+M2 N008 N005 0 0 2N7002
+M3 N008 N005 Vcc Vcc FDC638P
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\Users\You\Documents\LTspiceXVII\lib\cmp\standard.mos
+.tran 200e-4
+.lib LTC2.LIB
+.backanno
+.end
