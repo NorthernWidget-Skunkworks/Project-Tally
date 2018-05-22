@@ -1,0 +1,21 @@
+* C:\Users\You\Documents\Project-Tally\PulseLengthTrigger.asc
+C1 N004 0 {mc(1µ, C_tol)}
+R1 N004 N003 {mc(10k, R_tol)}
+XU1 N004 VRef N001 Vcc 0 LTC2054
+V1 N003 0 PULSE(0 3.3 1e-3 1e-9 1e-9 10e-3 20e-3 1)
+V2 Vcc 0 3.3
+R2 Vcc VRef {mc(30k, R_tol)}
+R3 VRef 0 {mc(10k, R_tol)}
+M1 N004 N005 0 0 2N7002
+A1 N003 0 0 0 0 N005 0 0 BUF Vhigh=3.3 Vlow=0
+A2 N001 0 0 0 0 N002 0 0 BUF Vhigh=3.3 Vlow=0
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\Users\You\Documents\LTspiceXVII\lib\cmp\standard.mos
+.tran 25e-3
+.param C_tol = 0.2
+.param R_tol = 0.05
+.step param run 1 10 1
+.lib LTC2.LIB
+.backanno
+.end
