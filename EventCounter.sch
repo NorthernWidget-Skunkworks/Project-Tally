@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.5.1">
+<eagle version="9.0.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="mm" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="mm"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="yes" active="no"/>
@@ -5392,7 +5392,16 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="DIGIKEY" value="" constant="no"/>
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+</technology>
+<technology name="0.1UF">
+<attribute name="DIGIKEY" value="399-14268-1-ND" constant="no"/>
+<attribute name="MF" value="KEMET" constant="no"/>
+<attribute name="MPN" value="C0402C104M4PAC7867" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="C0504" package="C0504">
@@ -7142,6 +7151,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <attribute name="PROJECT" value="Tally"/>
 <attribute name="REV" value="0.0"/>
 </part>
+<part name="C2" library="bschulz_passives" deviceset="C-EU" device="C0603" technology="0.1UF" value="0.1uF"/>
+<part name="GND10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="P+6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -7209,6 +7221,9 @@ Mechanical</text>
 <attribute name="REV" x="0" y="0" size="5.08" layer="96" ratio="15" display="off"/>
 </instance>
 <instance part="FRAME1" gate="G$2" x="172.72" y="0"/>
+<instance part="C2" gate="G$1" x="114.3" y="55.88"/>
+<instance part="GND10" gate="1" x="114.3" y="45.72"/>
+<instance part="P+6" gate="VCC" x="114.3" y="63.5"/>
 </instances>
 <busses>
 </busses>
@@ -7278,6 +7293,11 @@ Mechanical</text>
 <pinref part="R7" gate="G$1" pin="2"/>
 <wire x1="231.14" y1="152.4" x2="231.14" y2="154.94" width="0.1524" layer="91"/>
 <pinref part="P+5" gate="VCC" pin="VCC"/>
+</segment>
+<segment>
+<pinref part="C2" gate="G$1" pin="1"/>
+<pinref part="P+6" gate="VCC" pin="VCC"/>
+<wire x1="114.3" y1="58.42" x2="114.3" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -7387,6 +7407,11 @@ Mechanical</text>
 <pinref part="U9" gate="G2" pin="P$V-"/>
 <wire x1="27.94" y1="167.64" x2="17.78" y2="167.64" width="0.1524" layer="91"/>
 <junction x="17.78" y="167.64"/>
+</segment>
+<segment>
+<pinref part="C2" gate="G$1" pin="2"/>
+<pinref part="GND10" gate="1" pin="GND"/>
+<wire x1="114.3" y1="50.8" x2="114.3" y2="48.26" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$1" class="0">
