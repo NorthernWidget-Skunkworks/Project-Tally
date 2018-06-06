@@ -3,7 +3,7 @@
 <eagle version="9.0.1">
 <drawing>
 <settings>
-<setting alwaysvectorfont="yes"/>
+<setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="50" unitdist="mil" unit="mm" style="lines" multiple="1" display="no" altdistance="5" altunitdist="mil" altunit="mm"/>
@@ -29,9 +29,9 @@
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="20" name="Dimension" color="24" fill="1" visible="yes" active="yes"/>
 <layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="yes"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
@@ -46,12 +46,12 @@
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
 <layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
 <layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
-<layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
+<layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="yes"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="yes"/>
-<layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="yes"/>
 <layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
-<layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
+<layer number="44" name="Drills" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
@@ -59,7 +59,7 @@
 <layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
 <layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="yes"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="53" name="tGND_GNDA" color="7" fill="1" visible="no" active="no"/>
 <layer number="54" name="bGND_GNDA" color="7" fill="1" visible="no" active="no"/>
 <layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
@@ -182,6 +182,10 @@
 Developed by 
 Northern Widget and 
 University of Minnesota</text>
+<wire x1="5.08" y1="15.24" x2="6.477" y2="13.843" width="0.254" layer="52" curve="-95.452622"/>
+<wire x1="6.477" y1="12.573" x2="5.08" y2="11.176" width="0.254" layer="52" curve="-95.452622"/>
+<text x="5.588" y="13.208" size="1.27" layer="52" font="vector" ratio="15" rot="MR0" align="center">±</text>
+<wire x1="6.477" y1="13.843" x2="6.477" y2="12.573" width="0.254" layer="52"/>
 </plain>
 <libraries>
 <library name="bschulz_passives">
@@ -194,8 +198,8 @@ University of Minnesota</text>
 <wire x1="-1.473" y1="-0.983" x2="-1.473" y2="0.983" width="0.0508" layer="39"/>
 <wire x1="-0.356" y1="0.432" x2="0.356" y2="0.432" width="0.1016" layer="21"/>
 <wire x1="-0.356" y1="-0.419" x2="0.356" y2="-0.419" width="0.1016" layer="21"/>
-<smd name="1" x="-0.85" y="0" dx="1.1" dy="1" layer="1"/>
-<smd name="2" x="0.85" y="0" dx="1.1" dy="1" layer="1"/>
+<smd name="1" x="-0.85" y="0" dx="1" dy="1" layer="1"/>
+<smd name="2" x="0.85" y="0" dx="1" dy="1" layer="1"/>
 <text x="0" y="1.397" size="0.6096" layer="25" font="vector" ratio="15" align="center">&gt;NAME</text>
 <text x="0" y="-1.397" size="0.6096" layer="27" font="vector" ratio="15" align="center">&gt;VALUE</text>
 <rectangle x1="-0.8382" y1="-0.4699" x2="-0.3381" y2="0.4801" layer="21"/>
@@ -210,8 +214,8 @@ University of Minnesota</text>
 <wire x1="1.473" y1="0.983" x2="1.473" y2="-0.983" width="0.0508" layer="39"/>
 <wire x1="1.473" y1="-0.983" x2="-1.473" y2="-0.983" width="0.0508" layer="39"/>
 <wire x1="-1.473" y1="-0.983" x2="-1.473" y2="0.983" width="0.0508" layer="39"/>
-<smd name="1" x="-0.85" y="0" dx="1.1" dy="1" layer="1"/>
-<smd name="2" x="0.85" y="0" dx="1.1" dy="1" layer="1"/>
+<smd name="1" x="-0.85" y="0" dx="1" dy="1" layer="1"/>
+<smd name="2" x="0.85" y="0" dx="1" dy="1" layer="1"/>
 <text x="0" y="1.397" size="0.6096" layer="25" font="vector" ratio="15" align="center">&gt;NAME</text>
 <text x="0" y="-1.397" size="0.6096" layer="27" font="vector" ratio="15" align="center">&gt;VALUE</text>
 <rectangle x1="0.4318" y1="-0.4318" x2="0.8382" y2="0.4318" layer="21"/>
@@ -345,8 +349,8 @@ Source: http://focus.ti.com/lit/ds/slcs146e/slcs146e.pdf</description>
 <smd name="14" x="-1.905" y="2.8" dx="0.6" dy="1.2" layer="1"/>
 <smd name="15" x="-3.175" y="2.8" dx="0.6" dy="1.2" layer="1"/>
 <smd name="16" x="-4.445" y="2.8" dx="0.6" dy="1.2" layer="1"/>
-<text x="-5.715" y="0" size="0.6096" layer="25" font="vector" ratio="20" rot="R90" align="bottom-center">&gt;NAME</text>
-<text x="6.35" y="0" size="0.6096" layer="27" font="vector" ratio="20" rot="R90" align="bottom-center">&gt;VALUE</text>
+<text x="-5.715" y="0" size="0.6096" layer="25" font="vector" ratio="15" rot="R90" align="bottom-center">&gt;NAME</text>
+<text x="6.35" y="0" size="0.6096" layer="27" font="vector" ratio="15" rot="R90" align="bottom-center">&gt;VALUE</text>
 <polygon width="0.002540625" layer="21">
 <vertex x="-5.23875" y="-2.38125" curve="90"/>
 <vertex x="-5.55625" y="-2.06375" curve="90"/>
@@ -433,6 +437,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </packages>
 <packages3d>
 <package3d name="SMT-JUMPER_2_NC_PASTE_SILK" urn="urn:adsk.eagle:package:39282/1" type="box" library_version="1">
+<packageinstances>
+<packageinstance name="SMT-JUMPER_2_NC_PASTE_SILK"/>
+</packageinstances>
 </package3d>
 </packages3d>
 </library>
@@ -625,7 +632,11 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <attribute name="MF" value="Samsung" x="13.081" y="2.413" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="1276-6524-1-ND" x="13.081" y="2.413" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="J1" library="bschulz" package="1X04_SCREW" value="CONN_42.54_SCREW" x="3.429" y="10.668" rot="R90"/>
+<element name="J1" library="bschulz" package="1X04_SCREW" value="CONN_42.54_SCREW" x="3.429" y="10.668" rot="R90">
+<attribute name="DIGIKEY" value="ED10563-ND" x="3.429" y="10.668" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MF" value="On Shore" x="3.429" y="10.668" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN" value="OSTVN04A150" x="3.429" y="10.668" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
 <element name="Q1" library="bschulz" package="SOT323" value="2N7002" x="15.494" y="2.159" rot="R90">
 <attribute name="DIGIKEY" value="2N7002W-FDICT-ND" x="15.494" y="2.159" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MF" value="Diodes Incorporated" x="15.494" y="2.159" size="1.778" layer="27" rot="R90" display="off"/>
