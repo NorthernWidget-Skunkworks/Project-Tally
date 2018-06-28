@@ -1,16 +1,17 @@
-"Qty";"Value";"Device";"Package";"Parts";"Description";"DIGIKEY";"DISP";"MF";"MPN";"PROD_ID";"VALUE";"VALUE_PART";
-"1";"";"CONN_02SCREW_2.54";"1X02_2.54_SCREWTERM";"J2";"Multi connection point. Often used as Generic Header-pin footprint for 0.1 inch spaced/style header connections";"ED10561-ND";"";"OnShore";"OSTVN02A150";"";"";"";
-"2";"";"MOUNTING_HOLE2_NP";"2_56";"H1, H2";"Genaric Mechanical Mounting Hole";"";"";"";"";"";"";"";
-"2";"";"SN74HC165D";"SO16";"U5, U6";"SN74HC165 - 8 bit PISO shift register";"296-8250-1-ND";"";"TI";"SN74HC165DR";"";"";"";
-"2";"";"SN74HC590AD";"SO16";"U3, U4";"SN74HC590A - 8 bit binary counter with direct clear";"296-8340-5-ND";"";"TI";"SN74HC590AD";"";"";"";
-"3";"";"SN74LVC1G14DCK";"DCK_R-PDSO-G5";"U1, U9, U10";"SN74x1G14 - Single Schmitt Triger Inverter";"296-11608-1-ND";"";"TI";"SN74LVC1G14DCKR";"";"";"";
-"1";"0.1uF";"C-EU0.1UFC0603";"C0603";"C2";"CAPACITOR, European symbol";"490-6051-1-ND";"";"Murata";"GCM188R71E104KA57D";"";"";"";
-"3";"10M";"R-EU_10MR0603";"R0603";"R3, R5, R6";"RESISTOR, European symbol";"311-10.0MHRCT-ND";"";"Yageo";"RC0603FR-0710ML";"";"";"10M";
-"2";"10k";"R-EU_10KR0603";"R0603";"R1, R7";"RESISTOR, European symbol";"311-10.0KHRCT-ND";"";"Yageo";"RC0603FR-0710KL";"";"";"10k";
-"1";"1uF";"C-EU1UFC0603";"C0603";"C1";"CAPACITOR, European symbol";"1276-6524-1-ND";"";"Samsung";"1276-6524-1-ND";"";"";"";
-"1";"2N7002";"MOSFET-NCH-2N7002PW";"SOT323";"Q1";"N-channel MOSFETs";"2N7002W-FDICT-ND";"";"Diodes Incorporated";"2N7002W-7-F";"TRANS-11151";"2N7002";"";
-"1";"3.3M";"R-EU_3.3MR0603";"R0603";"R4";"RESISTOR, European symbol";"RMCF0603FT3M30CT-ND";"";"Stackpole";"RMCF0603FT3M30";"";"";"3.3M";
-"1";"CONN_42.54_SCREW";"CONN_42.54_SCREW";"1X04_SCREW";"J1";"Genaric 4 pin connector";"";"";"";"";"";"";"";
-"1";"DMG3404";"MOSFET-NCH-DMG3404L";"SOT23-3";"Q3";"N-channel MOSFETs";"DMG3404L-7DICT-ND";"";"Diodes Incorporated";"DMG3404L-7";"";"DMG3404";"";
-"1";"JUMPER-SMT_2_NC_PASTE_SILK";"JUMPER-SMT_2_NC_PASTE_SILK";"SMT-JUMPER_2_NC_PASTE_SILK";"JP1";"Normally closed solder jumper";"";"";"";"";"";"";"";
-"2";"MCP6041";"MCP6041";"SOT23-5";"U7, U8";"MCP6041 - Low Power Rail to Rail Op-Amp";"MCP6041T-I/OTCT-ND";"MCP6041";"Microchip";"MCP6041T-I/OT";"";"";"";
+"Qty","Value","Device","Package","Parts","Description","DIGIKEY","DISP","MF","MPN","PROD_ID","VALUE","VALUE_PART",
+"1","","CONN_02SCREW_2.54","1X02_2.54_SCREWTERM","J2","Multi connection point. Often used as Generic Header-pin footprint for 0.1 inch spaced/style header connections","ED10561-ND","","OnShore","OSTVN02A150","","","",
+"2","","MOUNTING_HOLE2_NP","2_56","H1, H2","Genaric Mechanical Mounting Hole","","","","","","","",
+"2","","SN74HC165D","SO16","U5, U6","SN74HC165 - 8 bit PISO shift register","296-8250-1-ND","","TI","SN74HC165DR","","","",
+"2","","SN74HC590AD","SO16","U3, U4","SN74HC590A - 8 bit binary counter with direct clear","296-8340-5-ND","","TI","SN74HC590AD","","","",
+"3","","SN74LVC1G14DCK","DCK_R-PDSO-G5","U1, U9, U10","SN74x1G14 - Single Schmitt Triger Inverter","296-11608-1-ND","","TI","SN74LVC1G14DCKR","","","",
+"1","0.1uF","C-EU0.1UFC0603","C0603","C2","CAPACITOR, European symbol","490-6051-1-ND","","Murata","GCM188R71E104KA57D","","","",
+"4","10M","R-EU_10MR0603","R0603","R3, R5, R6, R8","RESISTOR, European symbol","RMCF0603FT10M0CT-ND","","Stackpole","RMCF0603FT10M0","","","10M",
+"1","10k","R-EU_10KR0603","R0603","R1","RESISTOR, European symbol","P10.0KHCT-ND","","Panasonic","ERJ-3EKF1002V","","","10k",
+"2","1uF","C-EU1UFC0603","C0603","C1, C3","CAPACITOR, European symbol","1276-6524-1-ND","","Samsung","1276-6524-1-ND","","","",
+"1","2N7002","MOSFET-NCH-2N7002PW","SOT323","Q1","N-channel MOSFETs","2N7002W-FDICT-ND","","Diodes Incorporated","2N7002W-7-F","TRANS-11151","2N7002","",
+"3","3.3M","R-EU_3.3MR0603","R0603","R2, R4, R7","RESISTOR, European symbol","RMCF0603FT3M30CT-ND","","Stackpole","RMCF0603FT3M30","","","3.3M",
+"1","CONN_42.54_SCREW","CONN_42.54_SCREW","1X04_SCREW","J1","Genaric 4 pin connector","ED10563-ND","","On Shore","OSTVN04A150","","","",
+"1","DMG3404","MOSFET-NCH-DMG3404L","SOT23-3","Q3","N-channel MOSFETs","DMG3404L-7DICT-ND","","Diodes Incorporated","DMG3404L-7","","DMG3404","",
+"1","JUMPER-SMT_2_NC_PASTE_SILK","JUMPER-SMT_2_NC_PASTE_SILK","SMT-JUMPER_2_NC_PASTE_SILK","JP1","Normally closed solder jumper","","","","","","","",
+"3","MCP6041","MCP6041","SOT23-5","U2, U7, U8","MCP6041 - Low Power Rail to Rail Op-Amp","MCP6041T-I/OTCT-ND","MCP6041","Microchip","MCP6041T-I/OT","","","",
+"1","MIC842H","MIC842H","DCK_R-PDSO-G5","U$1","Comparator with internal voltage referance (1.24V), 5V and 3.3V compatable, 20mA output current","576-2926-1-ND","","Microchip","MIC842HYC5-TR","","","",

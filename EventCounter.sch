@@ -1392,13 +1392,14 @@ Switches electronic signals</description>
 <text x="86.36" y="1.27" size="2.54" layer="94">&gt;SHEET</text>
 <text x="88.9" y="11.43" size="2.54" layer="94">REV:</text>
 <text x="1.27" y="19.05" size="2.54" layer="94">TITLE:</text>
-<text x="1.27" y="11.43" size="2.54" layer="94">Document Number:</text>
 <text x="17.78" y="19.05" size="2.54" layer="94">&gt;DRAWING_NAME</text>
 <text x="22.86" y="30.48" size="2.54" layer="94">&gt;PROJECT</text>
 <text x="2.54" y="30.48" size="2.54" layer="94">Project:</text>
 <text x="2.54" y="25.4" size="2.54" layer="94">Designer:</text>
 <text x="22.86" y="25.4" size="2.54" layer="94">&gt;DESIGNER</text>
 <text x="88.9" y="7.62" size="2.54" layer="94">&gt;REV</text>
+<text x="1.016" y="7.874" size="1.778" layer="94">This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 
+http://creativecommons.org/licenses/by-sa/4.0/</text>
 </symbol>
 <symbol name="MIC842">
 <pin name="VDD" x="-10.16" y="2.54" length="middle" direction="pwr"/>
@@ -5472,6 +5473,11 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <attribute name="MF" value="" constant="no"/>
 <attribute name="MPN" value="" constant="no"/>
 </technology>
+<technology name="0.15UF">
+<attribute name="DIGIKEY" value="732-7990-1-ND" constant="no"/>
+<attribute name="MF" value="Wurth" constant="no"/>
+<attribute name="MPN" value="885012206072" constant="no"/>
+</technology>
 <technology name="0.1UF">
 <attribute name="DIGIKEY" value="490-6051-1-ND" constant="no"/>
 <attribute name="MF" value="Murata" constant="no"/>
@@ -6241,21 +6247,21 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <attribute name="VALUE_PART" value="" constant="no"/>
 </technology>
 <technology name="1.62M">
-<attribute name="DIGIKEY" value="RMCF0603FT1M62TR-ND" constant="no"/>
+<attribute name="DIGIKEY" value="RMCF0603FT1M62CT-ND" constant="no"/>
 <attribute name="MF" value="Stackpole" constant="no"/>
 <attribute name="MPN" value="RMCF0603FT1M62" constant="no"/>
 <attribute name="VALUE_PART" value="1.62M" constant="no"/>
 </technology>
 <technology name="10K">
-<attribute name="DIGIKEY" value="311-10.0KHRCT-ND" constant="no"/>
-<attribute name="MF" value="Yageo" constant="no"/>
-<attribute name="MPN" value="RC0603FR-0710KL" constant="no"/>
+<attribute name="DIGIKEY" value="P10.0KHCT-ND" constant="no"/>
+<attribute name="MF" value="Panasonic" constant="no"/>
+<attribute name="MPN" value="ERJ-3EKF1002V" constant="no"/>
 <attribute name="VALUE_PART" value="10k" constant="no"/>
 </technology>
 <technology name="10M">
-<attribute name="DIGIKEY" value="311-10.0MHRCT-ND" constant="no"/>
-<attribute name="MF" value="Yageo" constant="no"/>
-<attribute name="MPN" value="RC0603FR-0710ML" constant="no"/>
+<attribute name="DIGIKEY" value="RMCF0603FT10M0CT-ND" constant="no"/>
+<attribute name="MF" value="Stackpole" constant="no"/>
+<attribute name="MPN" value="RMCF0603FT10M0" constant="no"/>
 <attribute name="VALUE_PART" value="10M" constant="no"/>
 </technology>
 <technology name="180K">
@@ -6287,6 +6293,24 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <attribute name="MF" value="Yageo" constant="no"/>
 <attribute name="MPN" value="RC0603FR-07330RL" constant="no"/>
 <attribute name="VALUE_PART" value="330" constant="no"/>
+</technology>
+<technology name="P100K">
+<attribute name="DIGIKEY" value="P100KDBCT-ND" constant="no"/>
+<attribute name="MF" value="Panasonic" constant="no"/>
+<attribute name="MPN" value="ERA-3AEB104V" constant="no"/>
+<attribute name="VALUE_PART" value="100k" constant="no"/>
+</technology>
+<technology name="P10K">
+<attribute name="DIGIKEY" value="P10KDBCT-ND" constant="no"/>
+<attribute name="MF" value="Panasonic" constant="no"/>
+<attribute name="MPN" value="ERA-3AEB103V" constant="no"/>
+<attribute name="VALUE_PART" value="10k" constant="no"/>
+</technology>
+<technology name="P1K">
+<attribute name="DIGIKEY" value="P1.0KDBCT-ND" constant="no"/>
+<attribute name="MF" value="Panasonic" constant="no"/>
+<attribute name="MPN" value="ERA-3AEB102V" constant="no"/>
+<attribute name="VALUE_PART" value="1k" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -7203,7 +7227,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="FRAME1" library="bschulz" deviceset="FRAME_A_L" device="">
 <attribute name="DESIGNER" value="Bobby Schulz"/>
 <attribute name="PROJECT" value="Tally"/>
-<attribute name="REV" value="0.0"/>
+<attribute name="REV" value="0.1"/>
 </part>
 <part name="C2" library="bschulz_passives" deviceset="C-EU" device="C0603" technology="0.1UF" value="0.1uF"/>
 <part name="GND10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -7214,7 +7238,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="P+7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 <part name="GND13" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="U$1" library="bschulz" deviceset="MIC842" device="" technology="H"/>
-<part name="C3" library="bschulz_passives" deviceset="C-EU" device="C0603" value="1uF"/>
+<part name="C3" library="bschulz_passives" deviceset="C-EU" device="C0603" technology="1UF" value="1uF"/>
 <part name="GND14" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
@@ -7286,16 +7310,16 @@ Mechanical</text>
 <instance part="C2" gate="G$1" x="114.3" y="55.88"/>
 <instance part="GND10" gate="1" x="114.3" y="45.72"/>
 <instance part="P+6" gate="VCC" x="114.3" y="63.5"/>
-<instance part="U2" gate="G$1" x="121.92" y="106.68">
-<attribute name="DISP" x="121.92" y="106.68" size="1.778" layer="96" ratio="15" display="off"/>
+<instance part="U2" gate="G$1" x="111.76" y="101.6">
+<attribute name="DISP" x="111.76" y="101.6" size="1.778" layer="96" ratio="15" display="off"/>
 </instance>
-<instance part="R2" gate="G$1" x="106.68" y="119.38" rot="R90"/>
-<instance part="R8" gate="G$1" x="99.06" y="111.76" rot="R180"/>
-<instance part="P+7" gate="VCC" x="106.68" y="129.54"/>
-<instance part="GND13" gate="1" x="88.9" y="106.68"/>
-<instance part="U$1" gate="G$1" x="167.64" y="114.3"/>
-<instance part="C3" gate="G$1" x="154.94" y="106.68"/>
-<instance part="GND14" gate="1" x="154.94" y="96.52"/>
+<instance part="R2" gate="G$1" x="96.52" y="114.3" rot="R90"/>
+<instance part="R8" gate="G$1" x="88.9" y="106.68" rot="R180"/>
+<instance part="P+7" gate="VCC" x="96.52" y="124.46"/>
+<instance part="GND13" gate="1" x="78.74" y="101.6"/>
+<instance part="U$1" gate="G$1" x="157.48" y="109.22"/>
+<instance part="C3" gate="G$1" x="144.78" y="101.6"/>
+<instance part="GND14" gate="1" x="144.78" y="91.44"/>
 </instances>
 <busses>
 </busses>
@@ -7373,18 +7397,18 @@ Mechanical</text>
 </segment>
 <segment>
 <pinref part="R2" gate="G$1" pin="2"/>
-<wire x1="106.68" y1="124.46" x2="106.68" y2="127" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="119.38" x2="96.52" y2="121.92" width="0.1524" layer="91"/>
 <pinref part="P+7" gate="VCC" pin="VCC"/>
 </segment>
 <segment>
 <pinref part="U2" gate="G$1" pin="VDD"/>
-<wire x1="139.7" y1="106.68" x2="147.32" y2="106.68" width="0.1524" layer="91"/>
-<label x="142.24" y="106.68" size="1.778" layer="95"/>
+<wire x1="129.54" y1="101.6" x2="137.16" y2="101.6" width="0.1524" layer="91"/>
+<label x="132.08" y="101.6" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="VDD"/>
-<wire x1="157.48" y1="116.84" x2="152.4" y2="116.84" width="0.1524" layer="91"/>
-<label x="152.4" y="116.84" size="1.778" layer="95"/>
+<wire x1="147.32" y1="111.76" x2="142.24" y2="111.76" width="0.1524" layer="91"/>
+<label x="142.24" y="111.76" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -7502,24 +7526,24 @@ Mechanical</text>
 </segment>
 <segment>
 <pinref part="GND13" gate="1" pin="GND"/>
-<wire x1="88.9" y1="109.22" x2="88.9" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="104.14" x2="78.74" y2="106.68" width="0.1524" layer="91"/>
 <pinref part="R8" gate="G$1" pin="2"/>
-<wire x1="88.9" y1="111.76" x2="93.98" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="106.68" x2="83.82" y2="106.68" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U2" gate="G$1" pin="VSS"/>
-<wire x1="139.7" y1="101.6" x2="147.32" y2="101.6" width="0.1524" layer="91"/>
-<label x="142.24" y="101.6" size="1.778" layer="95"/>
+<wire x1="129.54" y1="96.52" x2="137.16" y2="96.52" width="0.1524" layer="91"/>
+<label x="132.08" y="96.52" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="GND"/>
-<wire x1="182.88" y1="111.76" x2="187.96" y2="111.76" width="0.1524" layer="91"/>
-<label x="182.88" y="111.76" size="1.778" layer="95"/>
+<wire x1="172.72" y1="106.68" x2="177.8" y2="106.68" width="0.1524" layer="91"/>
+<label x="172.72" y="106.68" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="GND14" gate="1" pin="GND"/>
 <pinref part="C3" gate="G$1" pin="2"/>
-<wire x1="154.94" y1="99.06" x2="154.94" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="93.98" x2="144.78" y2="96.52" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -7822,8 +7846,8 @@ Mechanical</text>
 </segment>
 <segment>
 <pinref part="U2" gate="G$1" pin="VIN+"/>
-<wire x1="114.3" y1="101.6" x2="106.68" y2="101.6" width="0.1524" layer="91"/>
-<label x="106.68" y="101.6" size="1.778" layer="95"/>
+<wire x1="104.14" y1="96.52" x2="96.52" y2="96.52" width="0.1524" layer="91"/>
+<label x="96.52" y="96.52" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$20" class="0">
@@ -7849,22 +7873,22 @@ Mechanical</text>
 <segment>
 <pinref part="U2" gate="G$1" pin="VIN-"/>
 <pinref part="R8" gate="G$1" pin="1"/>
-<wire x1="114.3" y1="111.76" x2="106.68" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="106.68" x2="96.52" y2="106.68" width="0.1524" layer="91"/>
 <pinref part="R2" gate="G$1" pin="1"/>
-<wire x1="106.68" y1="111.76" x2="104.14" y2="111.76" width="0.1524" layer="91"/>
-<wire x1="106.68" y1="114.3" x2="106.68" y2="111.76" width="0.1524" layer="91"/>
-<junction x="106.68" y="111.76"/>
+<wire x1="96.52" y1="106.68" x2="93.98" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="109.22" x2="96.52" y2="106.68" width="0.1524" layer="91"/>
+<junction x="96.52" y="106.68"/>
 </segment>
 </net>
 <net name="N$24" class="0">
 <segment>
 <pinref part="U2" gate="G$1" pin="OUT"/>
-<wire x1="139.7" y1="111.76" x2="154.94" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="129.54" y1="106.68" x2="144.78" y2="106.68" width="0.1524" layer="91"/>
 <pinref part="U$1" gate="G$1" pin="INP"/>
 <pinref part="C3" gate="G$1" pin="1"/>
-<wire x1="154.94" y1="111.76" x2="157.48" y2="111.76" width="0.1524" layer="91"/>
-<wire x1="154.94" y1="109.22" x2="154.94" y2="111.76" width="0.1524" layer="91"/>
-<junction x="154.94" y="111.76"/>
+<wire x1="144.78" y1="106.68" x2="147.32" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="104.14" x2="144.78" y2="106.68" width="0.1524" layer="91"/>
+<junction x="144.78" y="106.68"/>
 </segment>
 </net>
 <net name="PULSE_DIG" class="0">
@@ -7875,8 +7899,8 @@ Mechanical</text>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="OUT"/>
-<wire x1="182.88" y1="116.84" x2="193.04" y2="116.84" width="0.1524" layer="91"/>
-<label x="185.42" y="116.84" size="1.778" layer="95"/>
+<wire x1="172.72" y1="111.76" x2="187.96" y2="111.76" width="0.1524" layer="91"/>
+<label x="175.26" y="111.76" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
