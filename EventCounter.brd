@@ -3,7 +3,7 @@
 <eagle version="9.0.1">
 <drawing>
 <settings>
-<setting alwaysvectorfont="yes"/>
+<setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="50" unitdist="mil" unit="mm" style="lines" multiple="1" display="no" altdistance="5" altunitdist="mil" altunit="mm"/>
@@ -168,16 +168,16 @@
 <wire x1="2" y1="20.752" x2="0" y2="18.752" width="0" layer="20" curve="90"/>
 <text x="37.084" y="11.938" size="0.8128" layer="52" font="vector" ratio="15" rot="MR45" align="center">Pulse</text>
 <text x="37.084" y="14.351" size="0.8128" layer="52" font="vector" ratio="15" rot="MR45" align="center">GND</text>
-<text x="32.766" y="14.986" size="0.8128" layer="51" font="vector" ratio="15" rot="R90" align="center">J0</text>
+<text x="30.861" y="17.907" size="0.8128" layer="51" font="vector" ratio="15" rot="R90" align="center">J0</text>
 <text x="1.54780625" y="6.858" size="0.8128" layer="52" font="vector" ratio="15" rot="MR45" align="center">Clk</text>
 <text x="1.54780625" y="9.525" size="0.8128" layer="52" font="vector" ratio="15" rot="MR45" align="center">Data</text>
 <text x="1.54780625" y="11.938" size="0.8128" layer="52" font="vector" ratio="15" rot="MR45" align="center">Vcc</text>
 <text x="1.54780625" y="14.478" size="0.8128" layer="52" font="vector" ratio="15" rot="MR45" align="center">GND</text>
-<text x="33.782" y="14.732" size="0.8128" layer="52" font="vector" ratio="15" distance="40" rot="MR0" align="center">To Sensor
+<text x="35.306" y="9.144" size="0.8128" layer="52" font="vector" ratio="15" distance="40" rot="MR0" align="center">To Sensor
 0v ~ Vcc</text>
 <text x="3.429" y="17.272" size="0.8128" layer="52" font="vector" ratio="15" distance="40" rot="MR0" align="center">To Logger
 3.3v ~ 5v</text>
-<text x="29.591" y="17.399" size="0.8128" layer="52" font="vector" ratio="15" distance="40" rot="MR0" align="center-left">Project Tally v0.0
+<text x="29.591" y="17.399" size="0.8128" layer="52" font="vector" ratio="15" distance="40" rot="MR0" align="center-left">Project Tally v0.1
 --------------
 Developed by 
 Northern Widget and 
