@@ -9903,8 +9903,16 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 </classes>
 <parts>
 <part name="C1" library="bschulz_passives" deviceset="CPOL-EU" device="HL"/>
-<part name="D1" library="bschulz" deviceset="DIODE" device="DO-214AC"/>
-<part name="D2" library="bschulz" deviceset="DIODE" device="SOD-123" value="3.3v"/>
+<part name="D1" library="bschulz" deviceset="DIODE" device="DO-214AC">
+<attribute name="DIGIKEY" value="S1AFSCT-ND"/>
+<attribute name="MF" value="On Semiconductor"/>
+<attribute name="MPN" value="S1A"/>
+</part>
+<part name="D2" library="bschulz" deviceset="DIODE" device="SOD-123" value="3.3v">
+<attribute name="DIGIKEY" value="MMSZ4683-HE3-08GICT-ND"/>
+<attribute name="MF" value="Vishay"/>
+<attribute name="MPN" value="MMSZ4683-HE3-08"/>
+</part>
 <part name="R1" library="bschulz_passives" deviceset="R-EU_" device="R2512"/>
 <part name="J1" library="bschulz" deviceset="CONN_4" device="2.54_SCREW"/>
 <part name="J2" library="bschulz" deviceset="CONN_4" device="2.54_SCREW"/>
@@ -9930,6 +9938,9 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <instance part="D2" gate="G$1" x="43.18" y="22.86" smashed="yes" rot="R90">
 <attribute name="NAME" x="42.6974" y="25.4" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="45.4914" y="25.4" size="1.778" layer="96" rot="R90"/>
+<attribute name="MF" x="43.18" y="22.86" size="1.778" layer="96" rot="R90" display="off"/>
+<attribute name="DIGIKEY" x="43.18" y="22.86" size="1.778" layer="96" rot="R90" display="off"/>
+<attribute name="MPN" x="43.18" y="22.86" size="1.778" layer="96" rot="R90" display="off"/>
 </instance>
 <instance part="R1" gate="G$1" x="15.24" y="27.94" smashed="yes" rot="R180">
 <attribute name="NAME" x="19.05" y="26.4414" size="1.778" layer="95" rot="R180"/>
