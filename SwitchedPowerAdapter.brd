@@ -8,19 +8,19 @@
 </settings>
 <grid distance="50" unitdist="mil" unit="mm" style="lines" multiple="1" display="no" altdistance="5" altunitdist="mil" altunit="mm"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="1" name="Top" color="4" fill="1" visible="no" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="20" name="Dimension" color="24" fill="1" visible="yes" active="yes"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="yes"/>
 <layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="yes"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
@@ -33,19 +33,19 @@
 <layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
 <layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="yes"/>
-<layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="yes"/>
+<layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="yes"/>
-<layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="yes"/>
+<layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
-<layer number="44" name="Drills" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="yes"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="53" name="tGND_GNDA" color="7" fill="1" visible="no" active="no"/>
 <layer number="54" name="bGND_GNDA" color="7" fill="1" visible="no" active="no"/>
 <layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
@@ -152,8 +152,8 @@
 <wire x1="0" y1="10.944" x2="0" y2="0" width="0" layer="20"/>
 <dimension x1="27.61" y1="0" x2="27.61" y2="12.944" x3="31.496" y3="6.472" textsize="1.778" layer="48" unit="inch"/>
 <dimension x1="0" y1="0" x2="27.61" y2="0" x3="13.805" y3="-3.175" textsize="1.778" layer="48" unit="inch"/>
-<text x="21.336" y="5.461" size="0.8128" layer="52" font="vector" ratio="15" rot="SMR270" align="center">To Tally</text>
-<text x="6.35" y="5.461" size="0.8128" layer="52" font="vector" ratio="15" rot="MR270" align="center">To Logger</text>
+<text x="21.336" y="5.461" size="1.016" layer="52" font="vector" ratio="15" rot="SMR270" align="center">To Tally</text>
+<text x="6.35" y="5.461" size="1.016" layer="52" font="vector" ratio="15" rot="MR270" align="center">To Logger</text>
 <text x="1.4043625" y="9.271" size="0.8128" layer="52" font="vector" ratio="15" rot="MR180" align="center">Clk</text>
 <text x="1.4043625" y="6.731" size="0.8128" layer="52" font="vector" ratio="15" rot="MR180" align="center">Data</text>
 <text x="1.4043625" y="4.191" size="0.8128" layer="52" font="vector" ratio="15" rot="MR180" align="center">Vin</text>
@@ -164,6 +164,14 @@
 <text x="26.289" y="1.651" size="0.8128" layer="52" font="vector" ratio="15" rot="MR0" align="center">GND</text>
 <text x="3.429" y="11.811" size="0.6096" layer="51" font="vector" ratio="15" align="center">Tally Const
 Power</text>
+<text x="19.05" y="5.08" size="0.6096" layer="22" font="vector" ratio="15" rot="MR0">Project Tally
+Const Power Adapter v0.0
+2019.01.04
+Bobby Schulz 
+
+Design: Northern Widget LLC
+in collaboration with
+The University of Minnesota</text>
 </plain>
 <libraries>
 <library name="bschulz_passives">
@@ -182,6 +190,8 @@ Design Doc: https://media.digikey.com/pdf/Data%20Sheets/Elna%20America%20Inc/DS,
 <wire x1="-1.5" y1="-5.85" x2="1.5" y2="-5.85" width="0.254" layer="21"/>
 <wire x1="1.5" y1="-5.85" x2="1.5" y2="-3.048" width="0.254" layer="21"/>
 <circle x="0" y="0" radius="3.340846875" width="0" layer="43"/>
+<text x="-4.064" y="0" size="0.6096" layer="25" font="vector" ratio="15" rot="R270" align="center">&gt;NAME</text>
+<text x="3.937" y="0" size="0.6096" layer="27" font="vector" ratio="15" rot="R270" align="center">&gt;VALUE</text>
 </package>
 <package name="R2512">
 <description>&lt;b&gt;RESISTOR&lt;/b&gt;</description>
@@ -193,8 +203,8 @@ Design Doc: https://media.digikey.com/pdf/Data%20Sheets/Elna%20America%20Inc/DS,
 <wire x1="-3.973" y1="-1.983" x2="-3.973" y2="1.983" width="0.0508" layer="39"/>
 <smd name="1" x="-2.8" y="0" dx="1.8" dy="3.2" layer="1"/>
 <smd name="2" x="2.8" y="0" dx="1.8" dy="3.2" layer="1"/>
-<text x="-2.54" y="1.905" size="1.27" layer="25">&gt;NAME</text>
-<text x="-2.54" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
+<text x="0" y="2.413" size="0.6096" layer="25" font="vector" ratio="15" align="center">&gt;NAME</text>
+<text x="0" y="-2.413" size="0.6096" layer="27" font="vector" ratio="15" align="center">&gt;VALUE</text>
 <rectangle x1="-3.2004" y1="-1.5494" x2="-2.3505" y2="1.5507" layer="51"/>
 <rectangle x1="2.3622" y1="-1.5494" x2="3.2121" y2="1.5507" layer="51"/>
 <rectangle x1="-0.5001" y1="-1" x2="0.5001" y2="1" layer="35"/>
@@ -219,21 +229,21 @@ Design Doc: https://media.digikey.com/pdf/Data%20Sheets/Elna%20America%20Inc/DS,
 </library>
 <library name="bschulz">
 <packages>
-<package name="DO214AC" urn="urn:adsk.eagle:footprint:43214/1">
+<package name="DO214AC" urn="urn:adsk.eagle:footprint:43214/1" locally_modified="yes">
 <description>&lt;b&gt;DIODE&lt;/b&gt;</description>
-<wire x1="-2.3" y1="1" x2="2.3" y2="1" width="0.254" layer="51"/>
-<wire x1="2.3" y1="1" x2="2.3" y2="-0.95" width="0.254" layer="51"/>
-<wire x1="2.3" y1="-0.95" x2="-2.3" y2="-0.95" width="0.254" layer="51"/>
-<wire x1="-2.3" y1="-0.95" x2="-2.3" y2="1" width="0.254" layer="51"/>
+<wire x1="-2.3" y1="1" x2="2.3" y2="1" width="0.254" layer="21"/>
+<wire x1="2.3" y1="1" x2="2.3" y2="-0.95" width="0.254" layer="21"/>
+<wire x1="2.3" y1="-0.95" x2="-2.3" y2="-0.95" width="0.254" layer="21"/>
+<wire x1="-2.3" y1="-0.95" x2="-2.3" y2="1" width="0.254" layer="21"/>
 <wire x1="-0.8" y1="0" x2="0.25" y2="0.75" width="0.254" layer="21"/>
 <wire x1="0.25" y1="0.75" x2="0.25" y2="-0.7" width="0.254" layer="21"/>
 <wire x1="0.25" y1="-0.7" x2="-0.8" y2="0" width="0.254" layer="21"/>
 <smd name="C" x="-2.05" y="0" dx="1.8" dy="1.7" layer="1"/>
 <smd name="A" x="2.05" y="0" dx="1.8" dy="1.7" layer="1"/>
-<text x="-2.64" y="1.286" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="-2.64" y="-2.556" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
-<rectangle x1="-2.65" y1="-0.7" x2="-2.4" y2="0.65" layer="51"/>
-<rectangle x1="2.4" y1="-0.7" x2="2.65" y2="0.65" layer="51"/>
+<text x="-0.1" y="1.54" size="0.6096" layer="25" font="vector" ratio="15" align="center">&gt;NAME</text>
+<text x="-0.1" y="-1.54" size="0.6096" layer="27" font="vector" ratio="15" align="center">&gt;VALUE</text>
+<rectangle x1="-2.65" y1="-0.7" x2="-2.4" y2="0.65" layer="21"/>
+<rectangle x1="2.4" y1="-0.7" x2="2.65" y2="0.65" layer="21"/>
 <rectangle x1="-1" y1="-1.05" x2="-0.7" y2="1.05" layer="21"/>
 </package>
 <package name="SOD-123">
@@ -249,6 +259,8 @@ Design Doc: https://media.digikey.com/pdf/Data%20Sheets/Elna%20America%20Inc/DS,
 <vertex x="-0.635" y="-0.762"/>
 <vertex x="-0.635" y="0.762"/>
 </polygon>
+<text x="0" y="1.27" size="0.6096" layer="25" font="vector" ratio="15" align="center">&gt;NAME</text>
+<text x="0" y="-1.27" size="0.6096" layer="27" font="vector" ratio="15" align="center">&gt;VALUE</text>
 </package>
 <package name="1X04_SCREW">
 <description>&lt;h3&gt;Plated Through Hole - 4 Pin&lt;/h3&gt;
@@ -470,50 +482,56 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <attribute name="DIGIKEY" value="604-1020-1-ND" x="17.018" y="6.35" size="0.8128" layer="27" font="vector" ratio="15" align="center" display="off"/>
 <attribute name="MF" value="Elna" x="17.018" y="6.35" size="0.8128" layer="27" font="vector" ratio="15" align="center" display="off"/>
 <attribute name="MPN" value="DSK-3R3H224U-HL" x="17.018" y="6.35" size="0.8128" layer="27" font="vector" ratio="15" align="center" display="off"/>
+<attribute name="NAME" x="14.224" y="9.398" size="0.6096" layer="25" font="vector" ratio="15" align="center"/>
+<attribute name="VALUE" x="20.955" y="6.35" size="0.6096" layer="27" font="vector" ratio="15" rot="R270" align="center"/>
 </element>
 <element name="D1" library="bschulz" package="DO214AC" value="" x="11.049" y="11.43" smashed="yes" rot="R180">
 <attribute name="DIGIKEY" value="S1AFSCT-ND" x="-14.351" y="40.64" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MF" value="On Semiconductor" x="-14.351" y="40.64" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="S1A" x="-14.351" y="40.64" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="NAME" x="13.689" y="10.144" size="1.27" layer="25" ratio="10" rot="R180"/>
-<attribute name="VALUE" x="13.689" y="13.986" size="1.27" layer="27" ratio="10" rot="R180"/>
+<attribute name="NAME" x="11.784" y="9.89" size="0.6096" layer="25" font="vector" ratio="15" rot="R180" align="center"/>
+<attribute name="VALUE" x="11.149" y="12.97" size="0.6096" layer="27" font="vector" ratio="15" rot="R180" align="center"/>
 </element>
 <element name="D2" library="bschulz" package="SOD-123" value="3.3v" x="24.257" y="11.811" smashed="yes">
 <attribute name="DIGIKEY" value="MMSZ4683-HE3-08GICT-ND" x="24.257" y="11.811" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="Vishay" x="24.257" y="11.811" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="MMSZ4683-HE3-08" x="24.257" y="11.811" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="21.463" y="11.811" size="0.6096" layer="25" font="vector" ratio="15" align="center"/>
+<attribute name="VALUE" x="24.257" y="10.541" size="0.6096" layer="27" font="vector" ratio="15" align="center"/>
 </element>
 <element name="J1" library="bschulz" package="1X04_SCREW" value="CONN_42.54_SCREW" x="3.429" y="5.461" smashed="yes" rot="R90">
 <attribute name="DIGIKEY" value="ED10563-ND" x="19.939" y="25.781" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MF" value="On Shore" x="19.939" y="25.781" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="OSTVN04A150" x="19.939" y="25.781" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="NAME" x="2.032" y="5.715" size="0.6096" layer="25" font="vector" ratio="20" rot="R180"/>
+<attribute name="NAME" x="0.381" y="11.049" size="0.6096" layer="25" font="vector" ratio="20"/>
 <attribute name="VALUE" x="5.461" y="4.191" size="0.6096" layer="27" font="vector" ratio="20" rot="R90"/>
 </element>
 <element name="J2" library="bschulz" package="1X04_SCREW" value="CONN_42.54_SCREW" x="24.257" y="5.461" smashed="yes" rot="R270">
 <attribute name="DIGIKEY" value="ED10563-ND" x="0.127" y="-14.859" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MF" value="On Shore" x="0.127" y="-14.859" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MPN" value="OSTVN04A150" x="0.127" y="-14.859" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="NAME" x="25.654" y="6.731" size="0.6096" layer="25" font="vector" ratio="20" rot="R270"/>
+<attribute name="NAME" x="26.416" y="11.049" size="0.6096" layer="25" font="vector" ratio="20"/>
 <attribute name="VALUE" x="22.225" y="6.731" size="0.6096" layer="27" font="vector" ratio="20" rot="R270"/>
 </element>
 <element name="R1" library="bschulz_passives" package="R2512" value="" x="9.017" y="5.969" smashed="yes" rot="R270">
 <attribute name="DIGIKEY" value="CRM2512-JW-100ELFCT-ND" x="9.017" y="5.969" size="0.8128" layer="27" font="vector" ratio="15" rot="R270" align="center" display="off"/>
 <attribute name="MF" value="Bourns" x="9.017" y="5.969" size="0.8128" layer="27" font="vector" ratio="15" rot="R270" align="center" display="off"/>
 <attribute name="MPN" value="CRM2512-JW-100ELF" x="9.017" y="5.969" size="0.8128" layer="27" font="vector" ratio="15" rot="R270" align="center" display="off"/>
-<attribute name="NAME" x="10.922" y="8.509" size="1.27" layer="25" rot="R270"/>
-<attribute name="VALUE" x="5.842" y="8.509" size="1.27" layer="27" rot="R270"/>
+<attribute name="NAME" x="7.493" y="10.414" size="0.6096" layer="25" font="vector" ratio="15" align="center"/>
+<attribute name="VALUE" x="6.604" y="5.969" size="0.6096" layer="27" font="vector" ratio="15" rot="R270" align="center"/>
 </element>
 <element name="D3" library="bschulz" package="SOD-123" value="2.4v" x="12.446" y="2.54" smashed="yes" rot="R270">
 <attribute name="DIGIKEY" value="MMSZ4683-HE3-08GICT-ND" x="12.446" y="2.54" size="0.8128" layer="27" font="vector" ratio="15" rot="R270" align="center" display="off"/>
 <attribute name="MF" value="Vishay" x="12.446" y="2.54" size="0.8128" layer="27" font="vector" ratio="15" rot="R270" align="center" display="off"/>
 <attribute name="MPN" value="MMSZ4683-HE3-08" x="12.446" y="2.54" size="0.8128" layer="27" font="vector" ratio="15" rot="R270" align="center" display="off"/>
+<attribute name="NAME" x="13.716" y="2.54" size="0.6096" layer="25" font="vector" ratio="15" rot="R270" align="center"/>
+<attribute name="VALUE" x="11.176" y="2.54" size="0.6096" layer="27" font="vector" ratio="15" rot="R270" align="center"/>
 </element>
 <element name="R2" library="bschulz_passives" package="R0402" value="1k" x="12.446" y="6.477" smashed="yes" rot="R270">
 <attribute name="DIGIKEY" value="" x="12.446" y="6.477" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MF" value="Yageo" x="12.446" y="6.477" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MPN" value="" x="12.446" y="6.477" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="NAME" x="13.462" y="6.477" size="0.6096" layer="25" font="vector" ratio="15" rot="R270" align="center"/>
+<attribute name="NAME" x="12.446" y="8.382" size="0.6096" layer="25" font="vector" ratio="15" align="center"/>
 <attribute name="VALUE" x="11.43" y="6.477" size="0.6096" layer="27" font="vector" ratio="15" rot="R270" align="center"/>
 <attribute name="VALUE_PART" value="" x="12.446" y="6.477" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
