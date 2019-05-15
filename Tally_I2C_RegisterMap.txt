@@ -1,0 +1,19 @@
+
+ADR		Contents 
+----------------
+0x00	Control
+0x01	Data (Low)
+0x02	Data (High)
+
+Register Info
+
+Control
+
+Bit		POR		Function
+------------------------
+7		0		Sleep (Set to put the device into low power sleep mode, wake with I2C request)
+
+3		0		Peek (0, clear all on read, 1, manual clear/reset required)
+2		0		Clear (Set to trigger a clear of the I2C register, NOT the hardware)
+1		0		Reset (Set to trigger a clear of the hardware registers, NOT the I2C registers)
+0		0		Sample (Set to trigger a sample event, cleared automatically on data update)
