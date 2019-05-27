@@ -7,6 +7,8 @@ https://github.com/NorthernWidget-Skunkworks/Project-Tally
 
 This firmware is to be run on the I2C capable Tally v1.1 in order to allow for interface, control, and data collection 
 
+Firmware Version: 0.1.0
+
 "On two occasions I have been asked, 'Pray, Mr. Babbage, if you put into the machine wrong figures, will the right answers come out?' 
 I am not able rightly to apprehend the kind of confusion of ideas that could provoke such a question."
 -Charles Babbage
@@ -22,19 +24,22 @@ Distributed as-is; no warranty is given.
 #define CLK_PIN 9
 #define RST_PIN 8
 #define LOAD_PIN 7
+#define CHARGE_SW 0
+#define V_CAP_READ A7
 
 uint8_t ADR = 0x33; //DUMMY! FIX! and make changable
 
 // volatile bool GenCall = false; //Flag for generic address call over I2C //FIX! add generalizable address
 
 uint8_t Config = 0; //Global config value
-uint8_t Reg[3] = {0}; //Initialize registers
+uint8_t Reg[5] = {0}; //Initialize registers
 const uint8_t RegLen = sizeof(Reg); //Number of registers in Reg
 bool Sample = false; //Flag to get a new sample value
 bool Reset = false; //Reset flag
 bool Clear = false; //Clear registers
 bool Peek = false; //Clear values on read by default
 bool Sleep = false; //Do not sleep by default
+bool ReadCap = false; //Read float voltage of capacitor 
 
 volatile bool StopFlag = false; //Used to indicate a stop condition 
 volatile uint8_t RegID = 0; //Used to denote which register will be read from
@@ -47,6 +52,8 @@ void setup() {
 	pinMode(CLK_PIN, OUTPUT);
 	pinMode(RST_PIN, OUTPUT);
 	pinMode(LOAD_PIN, OUTPUT);
+	pinMode(CHARGE_SW, OUTPUT);
+	digitalWrite(CHARGE_SW, LOW); //By default have system charging 
 
 	Wire.begin(ADR);  //Begin slave I2C FIX! Add variable address feature!
 
@@ -80,6 +87,7 @@ void loop() {
 		Clear = BitRead(Reg[0], 2);
 		Peek = BitRead(Reg[0], 3);
 		Sleep = BitRead(Reg[0], 4); 
+		ReadCap = BitRead(Reg[0], 5);
 
 		if(Sample) {
 			SplitAndLoad(1, GetTicks()); //Load tick value into register 1
@@ -97,6 +105,10 @@ void loop() {
 			ClearTicks(); //Clear registers 
 			Reg[0] = Reg[0] & 0xFD; //Clear RESET bit
 			Reset = false; //Clear flag
+		}
+
+		if(ReadCap) {
+			ReadVoltage(); //Read voltage and load into I2C regs
 		}
 		delay(1); //Wait during wake/I2C transaction 
 	}
@@ -143,7 +155,10 @@ void ReceiveEvent(int DataLen) //When I2C values are sent
 	// 	ADR = Wire.read(); //Update address value 
 	// }
 
-	if(DataLen == 1 && GenCall == false){
+	// if(DataLen == 1 && GenCall == false){
+	// 	RegID = Wire.read(); //Read in the register ID to be used for subsequent read
+	// }
+	if(DataLen == 1){
 		RegID = Wire.read(); //Read in the register ID to be used for subsequent read
 	}
 }
@@ -179,6 +194,16 @@ void ClearTicks() //Clear digital logic values
 	digitalWrite(RST_PIN, HIGH);  //Pulse reset pin high for short interval to trigger reset
 	delayMicroseconds(5);
   	digitalWrite(RST_PIN, LOW); 
+}
+
+bool ReadVoltage() //Read the bit value at the specified position
+{
+	digitalWrite(CHARGE_SW, HIGH); //Connect voltage to ADC
+	delay(1); //Wait to settle FIX??
+	uint16_t Val = analogRead(V_CAP_READ);
+	digitalWrite(CHARGE_SW, LOW); //Disconnect and continue charging 
+	Reg[4] = Val >> 8; //Load MSB
+	Reg[3] = Val & 0xFF; //Load LSB
 }
 
 bool BitRead(uint8_t Val, uint8_t Pos) //Read the bit value at the specified position
