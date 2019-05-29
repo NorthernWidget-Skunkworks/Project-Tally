@@ -53,6 +53,7 @@ void setup() {
 	pinMode(RST_PIN, OUTPUT);
 	pinMode(LOAD_PIN, OUTPUT);
 	pinMode(CHARGE_SW, OUTPUT);
+	ReadVoltage(); //Get voltage on startup, available to read afterwards 
 	digitalWrite(CHARGE_SW, LOW); //By default have system charging 
 
 	Wire.begin(ADR);  //Begin slave I2C FIX! Add variable address feature!
