@@ -14853,7 +14853,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="GND14" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="U1" library="bschulz" deviceset="SN74*2G14" device="SC70" technology="AUP"/>
 <part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R8" library="bschulz_passives" deviceset="R-EU_" device="R0402" technology="10K"/>
+<part name="R8" library="bschulz_passives" deviceset="R-EU_" device="R0402" technology="10K" value="10k"/>
 <part name="Q2" library="bschulz" deviceset="MOSFET_PCH" device="-RZM001P02" value="MOSFET_PCH-RZM001P02"/>
 <part name="Q3" library="bschulz" deviceset="MOSFET-NCH" device="-RE1C002UN" value="MOSFET-NCH-RE1C002UN"/>
 <part name="R9" library="bschulz_passives" deviceset="R-EU_" device="R0402" technology="1M" value="1M"/>
