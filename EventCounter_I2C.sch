@@ -14858,10 +14858,10 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="Q3" library="bschulz" deviceset="MOSFET-NCH" device="-RE1C002UN" value="MOSFET-NCH-RE1C002UN"/>
 <part name="R9" library="bschulz_passives" deviceset="R-EU_" device="R0402" technology="1M" value="1M"/>
 <part name="GND26" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R10" library="bschulz_passives" deviceset="R-EU_" device="R0402" technology="1M" value="1M"/>
+<part name="R10" library="bschulz_passives" deviceset="R-EU_" device="R0402" technology="10K" value="10k"/>
 <part name="GND27" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="Q4" library="bschulz" deviceset="MOSFET_PCH" device="-NX2301P"/>
-<part name="R11" library="bschulz_passives" deviceset="R-EU_" device="R0402" technology="10K" value="10k"/>
+<part name="R11" library="bschulz_passives" deviceset="R-EU_" device="R0402" technology="1M" value="1M"/>
 <part name="JP0" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" deviceset="JUMPER-SMT_3_1-NC_PASTE" device="_SILK" package3d_urn="urn:adsk.eagle:package:39293/1"/>
 </parts>
 <sheets>
