@@ -20,9 +20,11 @@ Using jumpers on bottom side of board, can configure input as pullup, pulldown (
 | ---- | ------------- |
 | Pull Up | 16 |
 | Pull Down | 10 |
-| Direct, Square | 13 |
+| Direct, Square | 9 |
 | Direct, Sine | 22 |
 | Direct, Triangle | 22 |
+
+Measured using a function generator with a 2.5v amplitude for push pull tests, and driving an appropriately selected MOSFET for the pull up and pull down variations to act as an analogous switch, once again driven by a function generator. 
 
 ---
 
