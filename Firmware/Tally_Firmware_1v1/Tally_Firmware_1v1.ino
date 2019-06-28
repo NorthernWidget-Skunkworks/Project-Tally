@@ -40,6 +40,7 @@ bool Clear = false; //Clear registers
 bool Peek = false; //Clear values on read by default
 bool Sleep = false; //Do not sleep by default
 bool ReadCap = false; //Read float voltage of capacitor 
+bool NoCap = false; //Disconnect capacitor, this will be reset on POR
 
 volatile bool StopFlag = false; //Used to indicate a stop condition 
 volatile uint8_t RegID = 0; //Used to denote which register will be read from
@@ -84,11 +85,12 @@ void loop() {
 	int Counter = 0; //Run cycles after wakeup
 	while(++Counter < WAIT_TIME) {
 		Sample = BitRead(Reg[0], 0);
-		Reset = BitRead(Reg[0], 1);
-		Clear = BitRead(Reg[0], 2);
+		Clear = BitRead(Reg[0], 1);
+		Reset = BitRead(Reg[0], 2);
 		Peek = BitRead(Reg[0], 3);
 		Sleep = BitRead(Reg[0], 4); 
 		ReadCap = BitRead(Reg[0], 5);
+		NoCap = BitRead(Reg[0], 6);
 
 		if(Sample) {
 			SplitAndLoad(1, GetTicks()); //Load tick value into register 1
@@ -96,20 +98,31 @@ void loop() {
 			Reg[0] = Reg[0] & 0xFE; //Clear sample bit in register
 			Sample = false; //Clear sample bit
 		}
-		if(Clear) {
+		if(Reset) { //Software reset of system
+			ClearTicks();
 			Reg[1] = 0x00; //Clear registers
 			Reg[2] = 0x00;
-			Reg[0] = Reg[0] & 0xFB; //Clear CLEAR bit
+			Reg[0] = Reg[0]; //Reset to POR
 			Clear = false; //Clear flag
 		}
-		if(Reset) {
+		if(Clear) {
 			ClearTicks(); //Clear registers 
-			Reg[0] = Reg[0] & 0xFD; //Clear RESET bit
+			Reg[0] = Reg[0] & 0xFD; //Clear CLEAR bit
 			Reset = false; //Clear flag
 		}
 
 		if(ReadCap) {
 			ReadVoltage(); //Read voltage and load into I2C regs
+			Reg[0] = Reg[0] & 0xDF; //Clear Voltage Read bit
+			ReadCap = false; //Clear flag
+		}
+
+		if(NoCap) {
+			digitalWrite(CHARGE_SW, HIGH); //Disconnect cap from Vin
+		}
+
+		if(!NoCap) {
+			digitalWrite(CHARGE_SW, LOW); //Connect cap to Vin
 		}
 		delay(1); //Wait during wake/I2C transaction 
 	}
@@ -202,7 +215,7 @@ bool ReadVoltage() //Read the bit value at the specified position
 	digitalWrite(CHARGE_SW, HIGH); //Connect voltage to ADC
 	delay(1); //Wait to settle FIX??
 	uint16_t Val = analogRead(V_CAP_READ);
-	digitalWrite(CHARGE_SW, LOW); //Disconnect and continue charging 
+	if(!NoCap) digitalWrite(CHARGE_SW, LOW); //Disconnect and continue charging if cap is set to be nominally connected
 	Reg[4] = Val >> 8; //Load MSB
 	Reg[3] = Val & 0xFF; //Load LSB
 }

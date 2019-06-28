@@ -14,6 +14,21 @@ A minimal ultra low power digital event counter, designed to be a counterpart to
 
 Using jumpers on bottom side of board, can configure input as pullup, pulldown (ultra low power mode), or direct input if driving from another device
 
+### Connectivity:
+Device can easily be interfaced to using I2C at either 3.3v or 5v (logic and power). 
+
+A library has been developed for interfacing with Arduino based devices:
+[Tally Library](https://github.com/NorthernWidget-Skunkworks/Tally_Library)
+### Power Consumption: 
+
+| Mode | Current @ 3.3v | 
+| ---- | ------------- |
+| Default | ~4mA |
+| Sleep | <100uA |
+| Switched | N/A<sup>1</sup> |
+
+<sup>1</sup>When the device is disconnected from the power bus, it draws no external power and runs off the on board super cap. Tested in pull up mode with 100Hz, 50% duty cycle switching input. 
+
 #### Maximum input frequency: 
 
 | Mode | Max Freq [kHz] | 
