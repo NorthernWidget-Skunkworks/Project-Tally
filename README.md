@@ -27,7 +27,7 @@ A library has been developed for interfacing with Arduino based devices:
 | Sleep | <100uA |
 | Switched | N/A<sup>1</sup> |
 
-<sup>1</sup>When the device is disconnected from the power bus, it draws no external power and runs off the on board super cap. Tested in pull up mode with 100Hz, 50% duty cycle switching input. 
+<sup>1</sup>When the device is disconnected from the power bus, it draws no external power and runs off the on board super cap. Tested in pull up mode with 100Hz, 50% duty cycle switching input. Ran for 30 minutes, resulting in a consumption of ~ 0.275J of energy = 7.64e-5 Watt Hours -> 15.26 uW avg -> ~ 5uA @ 3v avg. 
 
 #### Maximum input frequency: 
 
