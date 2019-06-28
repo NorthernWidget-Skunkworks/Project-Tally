@@ -7,7 +7,7 @@ https://github.com/NorthernWidget-Skunkworks/Project-Tally
 
 This firmware is to be run on the I2C capable Tally v1.1 in order to allow for interface, control, and data collection 
 
-Firmware Version: 0.1.0
+Firmware Version: 0.2.0
 
 "On two occasions I have been asked, 'Pray, Mr. Babbage, if you put into the machine wrong figures, will the right answers come out?' 
 I am not able rightly to apprehend the kind of confusion of ideas that could provoke such a question."
@@ -26,6 +26,9 @@ Distributed as-is; no warranty is given.
 #define LOAD_PIN 7
 #define CHARGE_SW 0
 #define V_CAP_READ A7
+
+#define CHIP_ID_CALL 0xD0
+#define CHIP_ID 0xB0
 
 uint8_t ADR = 0x33; //DUMMY! FIX! and make changable
 
@@ -134,9 +137,11 @@ boolean AddressEvent(uint16_t Address, uint8_t count) //When a valid address is 
 }
 
 void RequestEvent()  //When I2C values are requested
-{	
-	for(int i = 0; i < RegLen; i++) {  
-		Wire.write(Reg[(RegID + i) % RegLen]);  //Load all bytes (wrap around) into register
+{	if(RegID == CHIP_ID_CALL) Wire.write(CHIP_ID); //Return Chip ID if requested
+	else {
+		for(int i = 0; i < RegLen; i++) {  
+			Wire.write(Reg[(RegID + i) % RegLen]);  //Load all bytes (wrap around) into register
+		}
 	}
 }
 
