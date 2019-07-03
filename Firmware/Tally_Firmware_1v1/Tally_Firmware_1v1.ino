@@ -29,6 +29,7 @@ Distributed as-is; no warranty is given.
 
 #define CHIP_ID_CALL 0xD0
 #define CHIP_ID 0xB0
+#define FIRMWARE_NUM 2
 
 uint8_t ADR = 0x33; //DUMMY! FIX! and make changable
 
@@ -137,7 +138,10 @@ boolean AddressEvent(uint16_t Address, uint8_t count) //When a valid address is 
 }
 
 void RequestEvent()  //When I2C values are requested
-{	if(RegID == CHIP_ID_CALL) Wire.write(CHIP_ID); //Return Chip ID if requested
+{	if(RegID == CHIP_ID_CALL) {
+		Wire.write(CHIP_ID); //Return Chip ID if requested
+		Wire.write(FIRMWARE_NUM); //Send firmware version number
+	}
 	else {
 		for(int i = 0; i < RegLen; i++) {  
 			Wire.write(Reg[(RegID + i) % RegLen]);  //Load all bytes (wrap around) into register
