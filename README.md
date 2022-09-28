@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2525460.svg)](https://doi.org/10.5281/zenodo.2525460)
+
 # Project-Tally
 A minimal ultra low power digital event counter, designed to be a counterpart to a traditional data logger to measure and average rapid events like an anemometer reading
 
