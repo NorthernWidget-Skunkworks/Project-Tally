@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this circuit-board design, please cite it as below."
+authors:
+- family-names: "Schulz"
+  given-names: "Bobby"
+  orcid: "https://orcid.org/0000-0002-9272-4756"
+title: "Project-Tally"
+version: 0.1.0
+doi: 10.5281/zenodo.2525460
+date-released: 2020-04-30
+url: "https://github.com/NorthernWidget-Skunkworks/Project-Tally"
